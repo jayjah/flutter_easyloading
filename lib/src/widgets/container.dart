@@ -211,14 +211,16 @@ class _Indicator extends StatelessWidget {
               child: indicator,
             ),
           if (status != null)
-            Text(
-              status!,
-              style: EasyLoadingTheme.textStyle ??
-                  TextStyle(
-                    color: EasyLoadingTheme.textColor,
-                    fontSize: EasyLoadingTheme.fontSize,
-                  ),
-              textAlign: EasyLoadingTheme.textAlign,
+            Expanded(
+              child: Text(
+                status!,
+                style: EasyLoadingTheme.textStyle ??
+                    TextStyle(
+                      color: EasyLoadingTheme.textColor,
+                      fontSize: EasyLoadingTheme.fontSize,
+                    ),
+                textAlign: EasyLoadingTheme.textAlign,
+              ),
             ),
         ],
       ),
